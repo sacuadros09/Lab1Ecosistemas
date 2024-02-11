@@ -88,19 +88,21 @@ const Type = document.createElement ("p")
 Type.textContent = data.types[0].type.name
 Type.id = "pokeType"
 
-const weightPokemon = document.createElement("figure")
-weightPokemon.id = "info"
+const widhtPokemon = document.createElement("figure")
+widhtPokemon.id = "info"
 
-const weightTittle = document.createElement("h5")
-weightTittle.id = "texttittle"
-weightTittle.textContent= "Weight"
+const widhtTittle = document.createElement("h5")
+widhtTittle.id = "texttittle"
+widhtTittle.textContent= "Weight"
 
-const weightText = document.createElement("p")
-weightText.id = "text"
-weightText.textContent = data.weight
-weightPokemon.appendChild(weightText)
-weightPokemon.appendChild(weightTittle)
+const widhtText = document.createElement("p")
+widhtText.id = "text"
+widhtTwidhtweightPokemon.appendChild(widhtText)
+widhtPokemon.appendChild(widhtTittle)
 
+
+heightPokemon = document.createElement("figure")
+heightPokemon
 
 
     Container.appendChild(image)
