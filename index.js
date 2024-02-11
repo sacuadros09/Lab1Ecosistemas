@@ -29,6 +29,17 @@ const charmanderImg = document.createElement("img")
 charmanderImg.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/4.gif"
 charmanderBtn.appendChild(charmanderImg)
 
+const squirtleBtn = document.createElement("button")
+squirtleBtn.id = "pokeBtn"
+squirtleBtn.addEventListener("click",() => {
+    Container.innerHTML=""
+    pokeData = 7
+    getApi(pokeData)
+})
+
+const squirtleImg = document.createElement("img")
+squirtleImg.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/7.gif"
+squirtleBtn.appendChild(squirtleImg)
 
 const section = document.createElement("section");
 section.appendChild(bulbasurBtn);
