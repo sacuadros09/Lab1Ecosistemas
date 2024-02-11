@@ -73,5 +73,35 @@ const renderPokemon = (data) => {
     image.src = data.sprites.versions ["generation-v"] ["black-white"].animated.front_default
 }
 
+
+section.id = "pokeCard"
+
+const idNumber = document.createElement("p")
+idNumber.id = "number"
+idNumber.textContent = `No° ${data.id}`
+
+const Name = document.createElement("p")
+Name.id = "header"
+Name.textContent = data.name
+
+const Type = document.createElement ("p")
+Type.textContent = data.types[0].type.name
+Type.id = "pokeType"
+
+const weightPokemon = document.createElement("figure")
+weightPokemon.id = "info"
+
+const weightTittle = document.createElement("h5")
+weightTittle.id = "texttittle"
+weightTittle.textContent= "Weight"
+
+const weightText = document.createElement("p")
+weightText.id = "text"
+weightText.textContent = data.weight
+weightPokemon.appendChild(weightText)
+weightPokemon.appendChild(weightTittle)
+
+
+
     Container.appendChild(image)
     Container.appendChild(section)
