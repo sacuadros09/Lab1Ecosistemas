@@ -1,8 +1,8 @@
 let pokeData
 
 async function getApi(pokeData) {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeData}`)
-    const data = await response.json()
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeData}`)
+    const data = await res.json()
     Pokemons(data)
 }
 
@@ -41,7 +41,7 @@ const squirtleImg = document.createElement("img")
 squirtleImg.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/7.gif"
 squirtleBtn.appendChild(squirtleImg)
 
-const section = document.createElement("section");
+const section = document.createElement ("section")
 section.appendChild(bulbasurBtn)
 section.appendChild(charmanderBtn)
 section.appendChild(squirtleBtn)
@@ -66,15 +66,15 @@ function evolve(pokeData) {
 
 const Container = document.createElement("div");
 
-const renderPokemon = (data) => {
-    const image = document.createElement("img")
+const Pokemons = (data) => {
+    const image = document.createElement("img");
     image.id = "gif"
-    image.alt = "No gif found"
-    image.src = data.sprites.versions ["generation-v"] ["black-white"].animated.front_default
+    image.alt = "No gif found";
+    image.src = data.sprites.versions["generation-v"]["black-white"].animated.front_default;
 }
 
-
-section.id = "pokeCard"
+const sectiom = document.createElement ("section")
+sectiom.id = "pokeCard"
 
 const idNumber = document.createElement("p")
 idNumber.id = "number"
@@ -156,19 +156,20 @@ const saveButtonSpan = document.createElement("span");
   saveButton.textContent = "Save";
   saveButtonSpan.appendChild(saveButton);
 
-    section.appendChild(idNumber)
-    section.appendChild(Name)
-    section.appendChild(Type)
-    section.appendChild(heightPokemon)
-    section.appendChild(widhtPokemon)
-    section.appendChild(backPokemon)
-    section.appendChild(devolveButton)
-    section.appendChild(evolveButton)
-    section.appendChild(document.createElement("br"))
-    section.appendChild(saveButtonSpan)
+    sectiom.appendChild(idNumber)
+    sectiom.appendChild(Name)
+    sectiom.appendChild(Type)
+    sectiom.appendChild(heightPokemon)
+    sectiom.appendChild(widhtPokemon)
+    sectiom.appendChild(backPokemon)
+    sectiom.appendChild(devolveButton)
+    sectiom.appendChild(evolveButton)
+    sectiom.appendChild(document.createElement("br"))
+    sectiom.appendChild(saveButtonSpan)
 
     Container.appendChild(image)
     Container.appendChild(section)
+    Container.appendChild(sectiom)
 
     document.getElementById("btnsResultsContainer").appendChild(Container);
 
