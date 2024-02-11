@@ -114,6 +114,35 @@ heightText.id = "text"
 heightPokemon.appendChild(heightText)
 heightPokemon.appendChild(heightTittle)
 
+const backPokemon = document.createElement("figure")
+backPokemon.id = "info"
+
+const backTittle = document.createElement("h5")
+backTittle.id = "text"
+backTittle.textContent="Back"
+
+const backImage = document.createElement("img")
+backImage.id = "gif"
+backImage.src =
+data.sprites.versions["generation-v"]["black-white"].animated.back_default
+
+backPokemon.appendChild(backTittle)
+backPokemon.appendChild(backImage)
+
+
+
+const devolveButton = document.createElement("button")
+devolveButton.id = "options"
+devolveButton.textContent = "Devolve"
+devolveButton.addEventListener("click", () => {
+    Container.innerHTML = ""
+    devolve(data.id)
+})
+
+
+
+
+
 
 
     Container.appendChild(image)
