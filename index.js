@@ -66,6 +66,12 @@ function evolve(pokeData) {
 
 const Container = document.createElement("div");
 
+const renderPokemon = (data) => {
+    const image = document.createElement("img")
+    image.id = "gif"
+    image.alt = "No gif found"
+    image.src = data.sprites.versions ["generation-v"] ["black-white"].animated.front_default
+}
 
-
+    Container.appendChild(image)
     Container.appendChild(section)
