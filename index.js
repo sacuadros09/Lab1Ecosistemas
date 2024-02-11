@@ -97,12 +97,23 @@ widhtTittle.textContent= "Weight"
 
 const widhtText = document.createElement("p")
 widhtText.id = "text"
-widhtTwidhtweightPokemon.appendChild(widhtText)
+widhtPokemon.appendChild(widhtText)
 widhtPokemon.appendChild(widhtTittle)
 
 
-heightPokemon = document.createElement("figure")
-heightPokemon
+const heightPokemon = document.createElement("figure")
+heightPokemon.id = "info"
+
+const heightTittle = document.createElement("h5")
+heightTittle.id = "text"
+heightTittle.textContent="Height"
+
+const heightText = document.createElement("p")
+heightText.id = "text"
+
+heightPokemon.appendChild(heightText)
+heightPokemon.appendChild(heightTittle)
+
 
 
     Container.appendChild(image)
