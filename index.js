@@ -50,29 +50,27 @@ document.getElementById("btnsContainer").appendChild(section)
 
 function devolve(pokeData) {
     if (pokeData >= 2 && pokeData <= 9) {
-        getApi (--pokeData);
+      getApi(--pokeData);
     } else {
-       getApi(pokeData) 
+      getApi(pokeData);
     }
-}
-
-function evolve(pokeData) {
-    if (pokeData >= 1 && pokeData <= 9){
-        getApi(--pokeData)
-    }else{
-        getApi(pokeData)
+  }
+  
+  function evolve(pokeData) {
+    if (pokeData >= 1 && pokeData <= 8) {
+      getApi(++pokeData);
+    } else {
+      getApi(pokeData);
     }
-}
-
+  }
 const Container = document.createElement("div");
 
 const Pokemons = (data) => {
     const image = document.createElement("img");
     image.id = "gif"
-    image.alt = "No gif found";
-    image.src = data.sprites.versions["generation-v"]["black-white"].animated.front_default;
-}
-
+    image.src = data.sprites.versions["generation-v"]["black-white"].animated.front_default
+    image.alt = "No gif found";;
+  
 const sectiom = document.createElement ("section")
 sectiom.id = "pokeCard"
 
@@ -88,31 +86,6 @@ const Type = document.createElement ("p")
 Type.textContent = data.types[0].type.name
 Type.id = "pokeType"
 
-const widhtPokemon = document.createElement("figure")
-widhtPokemon.id = "info"
-
-const widhtTittle = document.createElement("h5")
-widhtTittle.id = "texttittle"
-widhtTittle.textContent= "Weight"
-
-const widhtText = document.createElement("p")
-widhtText.id = "text"
-widhtPokemon.appendChild(widhtText)
-widhtPokemon.appendChild(widhtTittle)
-
-
-const heightPokemon = document.createElement("figure")
-heightPokemon.id = "info"
-
-const heightTittle = document.createElement("h5")
-heightTittle.id = "text"
-heightTittle.textContent="Height"
-
-const heightText = document.createElement("p")
-heightText.id = "text"
-
-heightPokemon.appendChild(heightText)
-heightPokemon.appendChild(heightTittle)
 
 const backPokemon = document.createElement("figure")
 backPokemon.id = "info"
@@ -148,30 +121,21 @@ evolveButton.addEventListener("click",() =>{
 })
 
 
-const saveButtonSpan = document.createElement("span");
-
-  saveButtonSpan.id = "save1"
-  const saveButton = document.createElement("button");
-  saveButton.id = "save";
-  saveButton.textContent = "Save";
-  saveButtonSpan.appendChild(saveButton);
-
     sectiom.appendChild(idNumber)
     sectiom.appendChild(Name)
     sectiom.appendChild(Type)
-    sectiom.appendChild(heightPokemon)
-    sectiom.appendChild(widhtPokemon)
     sectiom.appendChild(backPokemon)
     sectiom.appendChild(devolveButton)
     sectiom.appendChild(evolveButton)
     sectiom.appendChild(document.createElement("br"))
-    sectiom.appendChild(saveButtonSpan)
+  
 
     Container.appendChild(image)
     Container.appendChild(section)
     Container.appendChild(sectiom)
 
     document.getElementById("btnsResultsContainer").appendChild(Container);
+}
 
     function colorPokeTypes(data) {
         const type = data.types[0].type.name;
@@ -181,4 +145,5 @@ const saveButtonSpan = document.createElement("span");
         else if (type === "water") colorType.className = "Water";
       }
       colorPokeTypes(data);
-    
+
+   
