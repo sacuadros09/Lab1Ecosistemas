@@ -42,9 +42,9 @@ squirtleImg.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/spri
 squirtleBtn.appendChild(squirtleImg)
 
 const section = document.createElement("section");
-section.appendChild(bulbasurBtn);
-section.appendChild(charmanderBtn)
 section.appendChild(bulbasurBtn)
+section.appendChild(charmanderBtn)
+section.appendChild(squirtleBtn)
 
 document.getElementById("btnsContainer").appendChild(section)
 
@@ -139,11 +139,45 @@ devolveButton.addEventListener("click", () => {
     devolve(data.id)
 })
 
+const evolveButton = document.createElement("button")
+evolveButton.id = "options"
+evolveButton.textContent = "Evolve"
+evolveButton.addEventListener("click",() =>{
+    Container.innerHTML = ""
+    evolve(data.id)
+})
 
 
+const saveButtonSpan = document.createElement("span");
 
+  saveButtonSpan.id = "save1"
+  const saveButton = document.createElement("button");
+  saveButton.id = "save";
+  saveButton.textContent = "Save";
+  saveButtonSpan.appendChild(saveButton);
 
-
+    section.appendChild(idNumber)
+    section.appendChild(Name)
+    section.appendChild(Type)
+    section.appendChild(heightPokemon)
+    section.appendChild(widhtPokemon)
+    section.appendChild(backPokemon)
+    section.appendChild(devolveButton)
+    section.appendChild(evolveButton)
+    section.appendChild(document.createElement("br"))
+    section.appendChild(saveButtonSpan)
 
     Container.appendChild(image)
     Container.appendChild(section)
+
+    document.getElementById("btnsResultsContainer").appendChild(Container);
+
+    function colorPokeTypes(data) {
+        const type = data.types[0].type.name;
+        const colorType = document.getElementById("pokeType");
+        if (type === "fire") colorType.className = "Fire";
+        else if (type === "grass") colorType.className = "Grass";
+        else if (type === "water") colorType.className = "Water";
+      }
+      colorPokeTypes(data);
+    
