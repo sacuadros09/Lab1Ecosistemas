@@ -43,14 +43,21 @@ squirtleBtn.appendChild(squirtleImg)
 
 const section = document.createElement("section");
 section.appendChild(bulbasurBtn);
+section.appendChild(charmanderBtn)
+section.appendChild(bulbasurBtn)
 
+document.getElementById("btnsContainer").appendChild(section)
 
-document.getElementById("btnsContainer").appendChild(section);
-
-
+function devolve(pokemonData) {
+    if (pokeData >= 2 && pokeData <= 9) {
+        getApi (--pokeData);
+    } else {
+       getApi(pokeData) 
+    }
+}
 
 const Container = document.createElement("div");
 
 
-    Container.appendChild(image)
+
     Container.appendChild(section)
