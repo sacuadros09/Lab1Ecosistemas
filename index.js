@@ -48,11 +48,19 @@ section.appendChild(bulbasurBtn)
 
 document.getElementById("btnsContainer").appendChild(section)
 
-function devolve(pokemonData) {
+function devolve(pokeData) {
     if (pokeData >= 2 && pokeData <= 9) {
         getApi (--pokeData);
     } else {
        getApi(pokeData) 
+    }
+}
+
+function evolve(pokeData) {
+    if (pokeData >= 1 && pokeData <= 9){
+        getApi(--pokeData)
+    }else{
+        getApi(pokeData)
     }
 }
 
