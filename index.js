@@ -42,6 +42,7 @@ squirtleImg.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/spri
 squirtleBtn.appendChild(squirtleImg)
 
 const section = document.createElement ("section")
+section.id = "SectionButton"
 section.appendChild(bulbasurBtn)
 section.appendChild(charmanderBtn)
 section.appendChild(squirtleBtn)
@@ -67,7 +68,7 @@ const Container = document.createElement("div");
 
 const Pokemons = (data) => {
     const image = document.createElement("img");
-    image.id = "gif"
+    image.id = "gift"
     image.src = data.sprites.versions["generation-v"]["black-white"].animated.front_default
     image.alt = "No gif found";;
   
