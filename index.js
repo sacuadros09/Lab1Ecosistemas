@@ -126,8 +126,8 @@ evolveButton.addEventListener("click",() =>{
     sectiom.appendChild(Name)
     sectiom.appendChild(Type)
     sectiom.appendChild(backPokemon)
-    sectiom.appendChild(devolveButton)
     sectiom.appendChild(evolveButton)
+    sectiom.appendChild(devolveButton)
     sectiom.appendChild(document.createElement("br"))
   
 
